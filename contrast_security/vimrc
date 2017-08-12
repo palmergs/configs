@@ -1,6 +1,8 @@
 execute pathogen#infect()
 
 syntax on
+"colorscheme jellybeans
+colorscheme surveyor
 set number
 set ruler
 set noerrorbells
@@ -18,8 +20,9 @@ set expandtab
 set autoindent
 
 autocmd FileType java setlocal tabstop=4 shiftwidth=4 " override for java
-autocmd FileType go setlocal noexpandtab tabstop=4 shiftwidth=4 " override for go
+autocmd FileType go setlocal autoindent noexpandtab tabstop=4 shiftwidth=4 " override for go
 autocmd FileType c setlocal noexpandtab tabstop=8 shiftwidth=8 " override for c
+autocmd FileType rust setlocal tabstop=4 shiftwidth=4 " override for rust
 
 command Rtree NERDTree
 
