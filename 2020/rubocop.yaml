@@ -1,0 +1,81 @@
+#--------1---------2---------3---------4---------5---------6---------7---------8---------9---------0
+AllCops:
+  Exclude:
+   - 'lib/contrast/api/settings_pb.rb'
+   - 'lib/contrast/api/dtm_pb.rb'
+Security/Eval:
+  Exclude:
+    - 'test/**/*.rb'
+    - 'spec/**/*.rb'
+Security/MarshalLoad:
+  Exclude:
+    - 'test/**/*.rb'
+    - 'spec/**/*.rb'
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'test/**/*.rb'
+    - 'spec/**/*.rb'
+Metrics/ModuleLength:
+  Max: 200
+Metrics/ClassLength:
+  Max: 200
+Metrics/MethodLength:
+  Max: 16
+Metrics/LineLength:
+  Max: 100
+  Exclude:
+    - 'test/**/*.rb'
+    - 'spec/**/*.rb'
+Metrics/AbcSize:
+  Exclude:
+    - 'test/**/*.rb'
+    - 'spec/**/*.rb'
+Style/BlockComments:
+  Exclude:
+    - 'test/**/*.rb'
+    - 'spec/**/*.rb'
+Naming/UncommunicativeMethodParamName:
+  Exclude:
+    - 'test/**/*.rb'
+    - 'spec/**/*.rb'
+Layout/DotPosition: 
+  EnforcedStyle: trailing
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+  IndentationWidth: 4
+Layout/SpaceInsideBlockBraces:
+  EnforcedStyle: space
+  EnforcedStyleForEmptyBraces: space
+  SpaceBeforeBlockParameters: false
+Layout/MultilineMethodCallBraceLayout:
+  EnforcedStyle: same_line
+Layout/MultilineMethodDefinitionBraceLayout:
+  EnforcedStyle: same_line
+Layout/SpaceInsideStringInterpolation:
+  EnforcedStyle: space
+Layout/FirstParameterIndentation:
+  IndentationWidth: 4
+#TODO: waiting for beginning_only to be implemented
+#Layout/EmptyLinesAroundBlockBody:
+#  EnforcedStyle: beginning_only
+Style/NumericPredicate:
+  Enabled: false
+Style/MethodDefParentheses:
+  EnforcedStyle: require_no_parentheses_except_multiline
+Style/RedundantFreeze:
+  Enabled: false
+Style/RegexpLiteral:
+  Enabled: false
+Style/RescueStandardError:
+  Enabled: false
+# Safe navigation operator &. only added in ruby 2.3
+Style/SafeNavigation:
+  Enabled: false
+Style/Alias:
+  EnforcedStyle: prefer_alias_method
+Naming/MemoizedInstanceVariableName:
+  EnforcedStyleForLeadingUnderscores: required
