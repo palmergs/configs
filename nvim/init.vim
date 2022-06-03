@@ -1,9 +1,3 @@
-" .config/nvim/init.vim
-" https://www.linode.com/docs/guides/how-to-install-neovim-and-plugins-with-vim-plug/
-" 
-" Neovim plugin manager
-" curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
 syntax on
 set number
 set ruler
@@ -20,22 +14,25 @@ set shiftwidth=2
 set expandtab
 set autoindent
 
+set invlist
+
 autocmd FileType go setlocal autoindent noexpandtab tabstop=4 shiftwidth=4
-autocmd FileType java setlocal tabstop=4 shiftwidth=4
 autocmd FileType rust setlocal tabstop=4 shiftwidth=4
 
-map ' :Rg<Space>
 map ; :Files<CR>
+map ' :Rg
 
 command Rtree NERDTree
 command RTree NERDTree
-
-let g:rg_derive_root = 'true'
-let g:rg_highlight = 'true'
+command Rg rg
 
 set backupdir=/tmp//
 set directory=/tmp//
 set undodir=/tmp//
+
+
+set background=dark
+colorscheme jellybeans
 
 call plug#begin()
 Plug 'brooth/far.vim'
@@ -46,6 +43,10 @@ Plug 'tpope/vim-rails'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'jremmen/vim-ripgrep'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'jremmen/vim-ripgrep'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'elixir-editors/vim-elixir'
+Plug 'cespare/vim-toml', { 'branch': 'main' }
 call plug#end()
+
